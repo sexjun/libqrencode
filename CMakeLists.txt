@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.1.0)
 
 project(QRencode VERSION 4.1.1 LANGUAGES C)
 
-option(WITH_TOOLS "Build utility tools"  YES )
-option(WITH_TESTS "Build tests"  NO )
-option(WITHOUT_PNG "Disable PNG support" NO)
+option(WITH_TOOLS "Build utility tools"  OFF )
+option(WITH_TESTS "Build tests"  OFF )
+option(WITHOUT_PNG "Disable PNG support" ON)
 option(GPROF "Generate extra code to write profile information" OFF)
 option(COVERAGE "Generate extra code to write coverage information" OFF)
 option(ASAN "Use AddressSanitizer" OFF)
-option(BUILD_SHARED_LIBS "Enable build of shared libraries" NO)
+option(BUILD_SHARED_LIBS "Enable build of shared libraries" ON)
 
 if(BUILD_TESTING)
     set(WITH_TESTS ON)
